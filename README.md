@@ -1,9 +1,9 @@
 meteor-ezpublish
 ================
 
-publish a collection once and let subscibers determine the details
+Publish a collection once and let subscribers determine the details
 
-example:
+Example:
 
 	// publish the (entire) Entries collection on the server
 	ezPublish(Entries, { fields: {
