@@ -32,7 +32,7 @@ Example 2:
 	Meteor.subscribe(
 		'ez_entries',
 		{ project: { $in: ['games', 'publications'] } }, 
-		{ fields: { comment: 0, description: 0 } }
+		{ fields: { description: 0 } }
 	);
 
 	// return everything from the publication
@@ -40,4 +40,11 @@ Example 2:
 		'ez_entries',
 		{ }, 
 		{ fields: { } }
+	);
+
+	// only update the fields
+	Meteor.subscribe(
+		'ez_entries',
+		null, 
+		{ fields: { description: 0 } }
 	);
