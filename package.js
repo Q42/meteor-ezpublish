@@ -1,6 +1,6 @@
 Package.describe({
   name: 'q42:ezpublish',
-  summary: 'publish a collection once and let subscibers determine the details',
+  summary: 'Publish a collection once and let subscribers determine the details',
   version: '0.1.1',
   git: 'https://github.com/Q42/meteor-ezpublish'
 });
