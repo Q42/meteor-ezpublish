@@ -5,9 +5,14 @@ ezPublish = function ezPublish(collection, defaultSelector, defaultOptions) {
     if (!this.userId) {
       // the user is unknown now
       // but when Tracker sees that you're logged in, the subscribe will be re-evaluated
-      return;
+      return [];
     }
     console.log('ddp ez_' + collection._name + ' subscribed by ' + this.userId);
+
+    // TODO fix this
+    if (selector == {} && typeof options == 'undefined') {
+      console.warn('No params given to DDP ' + collection._name + ', please pass NULL,NULL to use defaults');
+    }
 
     selector = selector || defaultSelector || {};
     console.log('   selector: ' + JSON.stringify(selector));
